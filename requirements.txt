@@ -1,0 +1,7 @@
+Django==5.0.6
+djangorestframework==3.15.1
+mysqlclient==2.2.4              # Or use psycopg2 if you're using PostgreSQL
+python-dotenv==1.0.1            # For managing environment variables
+Pillow==10.3.0                  # For handling user profile images (optional)
+gunicorn==21.2.0                # For production server
+

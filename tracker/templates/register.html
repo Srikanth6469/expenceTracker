@@ -1,0 +1,122 @@
+{% extends "base.html"%}
+{% block start %}
+{% comment %} <div  style="margin-top: -80px !important">
+<h3>Register Page</h3>
+<form method="POST" id="form">
+    {% csrf_token %}
+    <div class="form-control">
+        <label for="text">Username</label>
+        <input type="text" name="username" id="text" placeholder="Username..." />
+        <small>Unique username is required</small>
+    </div>
+    <div class="form-control">
+        <label for="text">First name</label>
+        <input type="text" name="first_name" id="text" placeholder="First Name..." />
+      
+    </div>
+    <div class="form-control">
+        <label for="text">Last name</label>
+        <input type="text" name="last_name" id="text" placeholder="Last Name..." />
+      
+    </div>
+    <div class="form-control">
+        <label for="amount">Password <br />
+        </label>
+        <input type="password" name="password" id="amount" placeholder="Password ..." />
+    </div>
+    <p><span>Already have an account</span> <a href="{% url 'login_view2' %}">Login</a></p>
+    <button class="btn" type="submit" style="background-color: chartreuse;">Register</button>
+</form>
+
+</div> {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .register-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .login-link {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .login-link a {
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="register-container">
+
+  <h2>Create Account</h2>
+
+  {% comment %} <form action="/register" method="POST"> {% endcomment %}
+    <form method="POST" id="form">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Username" required />
+    {% comment %} <input type="email" name="email" placeholder="Email Address" required /> {% endcomment %}
+    <input type="password" name="password" placeholder="Password" required />
+    <input type="password" name="confirm_password" placeholder="Confirm Password" required />
+    <button type="submit">Register</button>
+    <div class="login-link">
+      Already have an account? <a href="{% url 'login_view2' %}">Login</a>
+
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
+
+{% endblock %} 
