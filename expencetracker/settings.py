@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-up$o#hg9g3y5#j&aawt1#6^fmc-xa#^y&hmb2eved9#$t85a#o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
 
 
 # Application definition
@@ -139,3 +139,5 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+# Security settings
+ALLOWED_HOSTS = ['expencetracker-1-4i3t.onrender.com']
